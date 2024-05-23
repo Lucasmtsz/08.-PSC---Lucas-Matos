@@ -63,7 +63,7 @@ class Empregado {
 
     public void promover(String novoCargo) {
         this.cargo = novoCargo;
-        aumentarSalario(25); 
+        aumentarSalario(25);
     }
 
     public void aumentarSalario(double percentual) {
@@ -143,7 +143,6 @@ public class Main {
                     break;
                 case 7:
                     System.out.println("Saindo...");
-                    scanner.close();
                     return;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
@@ -234,7 +233,7 @@ public class Main {
         int index = scanner.nextInt();
         scanner.nextLine();
 
-        if (index >= 1 && index <= empregados.size()) {
+        if (index > 0 && index <= empregados.size()) {
             return empregados.get(index - 1);
         } else {
             System.out.println("Empregado inválido.");
